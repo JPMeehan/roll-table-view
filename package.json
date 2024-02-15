@@ -1,0 +1,22 @@
+{
+  "name": "roll-table-view",
+  "version": "1.0.0",
+  "description": "Adds a view-only sheet for rollable tables to use after they've been configured.",
+  "main": "roll-table-view.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPMeehan/roll-table-view.git"
+  },
+  "keywords": [
+    "FVTT"
+  ],
+  "author": "Joseph Meehan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JPMeehan/roll-table-view/issues"
+  },
+  "homepage": "https://github.com/JPMeehan/roll-table-view#readme"
+}

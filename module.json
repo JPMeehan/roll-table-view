@@ -1,0 +1,22 @@
+{
+  "id": "roll-table-view",
+  "title": "Roll Table Viewing Sheet",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "description": "Adds a view-only sheet for rollable tables to use after they've been configured.",
+  "authors": [
+    {
+      "name": "Joseph Meehan",
+      "discord": "chaosos",
+      "email": "jpmeehan5@gmail.com",
+      "url": "https://joseph-meehan.carrd.co/",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/JPMeehan/roll-table-view",
+  "esmodules": ["roll-table-view.mjs"],
+  "styles": ["roll-table-view.css"]
+}
