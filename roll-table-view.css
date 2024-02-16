@@ -13,6 +13,9 @@
     }
     .result-image {
       flex: 0 0 40px;
+      img {
+        border: none;
+      }
     }
     td.result-range,
     td.result-image {
