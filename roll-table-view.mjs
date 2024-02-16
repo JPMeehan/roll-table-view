@@ -7,6 +7,18 @@ class RollTableView extends RollTableConfig {
       template: 'modules/roll-table-view/templates/roll-table-view.hbs',
     });
   }
+
+  async getData(options = {}) {
+    const context = await super.getData(options);
+
+    for (const r of context.results) {
+      const result = this.document.results.get(r._id);
+      const rawText = result.getChatText();
+      r.enrichedText = await TextEditor.enrichHTML(rawText);
+    }
+
+    return context;
+  }
 }
 
 Hooks.once('init', () => {

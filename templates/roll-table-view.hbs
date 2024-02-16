@@ -45,15 +45,8 @@
                         <img src="{{result.img}}" data-edit="results.{{i}}.img" width="32" height="32"/>
                     </td>
                     <td class="result-details">
-                        {{#if result.isText}}
-                        {{{result.text}}}
-
-                        {{else if result.isDocument}}
-                        {{result.text}}
-
-                        {{else if result.isCompendium}}
-                        {{result.text}}
-                        {{/if}}
+                        <input type="hidden" name="results.{{i}}.type" data-dtype="Number" value="{{result.type}}">
+                        {{{result.enrichedText}}}
                     </td>
                 </tr>
                 {{/each}}
