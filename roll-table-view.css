@@ -1,0 +1,12 @@
+.roll-table-view {
+  .result-range {
+    flex: 0 0 60px;
+  }
+  .result-image {
+    flex: 0 0 40px;
+  }
+  td.result-range,
+  td.result-image {
+    text-align: center;
+  }
+}

@@ -1,0 +1,72 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow">
+        <img src="{{data.img}}" data-edit="img" title="{{data.name}}" height="64" width="64"/>
+        <h1 class="name">
+            {{data.name}}
+        </h1>
+    </header>
+
+    <div class="form-group stacked">
+        {{{descriptionHTML}}}
+    </div>
+    
+    <hr>
+
+    <div class="form-group">
+        <label>{{ localize "TABLE.Replacement" }}</label>
+        <input type="checkbox" name="replacement" {{checked data.replacement}}/>
+    </div>
+
+    <div class="form-group">
+        <label>{{ localize "TABLE.DisplayRoll" }}</label>
+        <input type="checkbox" name="displayRoll" {{checked data.displayRoll}}/>
+    </div>
+
+    <!-- Roll Table Results Loop -->
+    <section class="results">
+        <table class="table-results">
+            <thead>
+                <tr class="table-result table-header flexrow">
+                    <th class="result-range">{{data.formula}}</th>
+                    <th class="result-image">{{localize "Image"}}</th>
+                    <th>{{localize "TABLE.ResultDetails"}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each results as |result i|}} 
+                <tr class="table-result flexrow {{#if result.drawn}}drawn{{/if}}" data-result-id="{{result._id}}">
+                    <input type="hidden" name="results.{{i}}._id" value="{{result._id}}"/>
+                    <td class="result-range">
+                        {{concat result.range.[0] "–" result.range.[1]}}
+                    </td>
+                    <td class="result-image">
+                        <img src="{{result.img}}" data-edit="results.{{i}}.img" width="32" height="32"/>
+                    </td>
+                    <td class="result-details">
+                        <input type="hidden" name="results.{{i}}.documentId" value="{{result.documentId}}"/>
+                        {{#if result.isText}}
+                        {{result.text}}
+
+                        {{else if result.isDocument}}
+                        {{result.text}}
+
+                        {{else if result.isCompendium}}
+                        {{result.text}}
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Roll Table Footer -->
+    <footer class="sheet-footer flexrow">
+        {{#if owner}}
+        <button class="submit" type="submit"><i class="fas fa-save"></i> {{ localize "TABLE.Update" }}</button>
+        <button class="reset" type="button"><i class="fas fa-undo"></i> {{ localize "TABLE.Reset" }}</button>
+        {{/if}}
+        <button class="roll" type="button"><i class="fas fa-dice-d20"></i> {{ localize "TABLE.Roll" }}</button>
+    </footer>
+</form>
+

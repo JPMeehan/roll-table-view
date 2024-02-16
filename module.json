@@ -18,5 +18,13 @@
   ],
   "url": "https://github.com/JPMeehan/roll-table-view",
   "esmodules": ["roll-table-view.mjs"],
-  "styles": ["roll-table-view.css"]
+  "styles": ["roll-table-view.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ]
 }
