@@ -1,7 +1,7 @@
 {
   "id": "roll-table-view",
   "title": "Roll Table Viewing Sheet",
-  "version": "1.0.0",
+  "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
@@ -16,7 +16,6 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/JPMeehan/roll-table-view",
   "esmodules": ["roll-table-view.mjs"],
   "styles": ["roll-table-view.css"],
   "languages": [
@@ -26,5 +25,8 @@
       "path": "lang/en.json",
       "flags": {}
     }
-  ]
+  ],
+  "url": "https://github.com/JPMeehan/roll-table-view",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
 }
