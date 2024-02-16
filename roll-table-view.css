@@ -1,12 +1,22 @@
 .roll-table-view {
-  .result-range {
-    flex: 0 0 60px;
-  }
-  .result-image {
-    flex: 0 0 40px;
-  }
-  td.result-range,
-  td.result-image {
-    text-align: center;
+  table.table-results {
+    .table-result.roulette {
+      background: rgba(0, 0, 0, 0.25);
+      border-top: 1px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border-dark);
+    }
+    .table-result.drawn {
+      background: rgba(0, 0, 0, 0.15);
+    }
+    .result-range {
+      flex: 0 0 60px;
+    }
+    .result-image {
+      flex: 0 0 40px;
+    }
+    td.result-range,
+    td.result-image {
+      text-align: center;
+    }
   }
 }
