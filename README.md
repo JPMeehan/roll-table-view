@@ -6,4 +6,10 @@
 
 A simple module that adds a new sheet for roll tables that prioritizes displaying information over configuration.
 
+[dnd5e Bag of Beans](/assets/BagOfBeans.png)
+
+[dnd5e Bag of Tricks](/assets/BagOfTricks.png)
+
 To use, go to the "sheets" header button and switch to the "View Roll Table Sheet".
+
+[Sheet Config](/assets/RollSheetSelection.png)
