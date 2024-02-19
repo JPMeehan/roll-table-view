@@ -1,4 +1,10 @@
 .roll-table-view {
+  .sheet-header {
+    img {
+      border: none;
+    }
+  }
+
   table.table-results {
     .table-result {
       align-items: center;
