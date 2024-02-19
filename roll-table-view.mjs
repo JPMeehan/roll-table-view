@@ -19,6 +19,22 @@ class RollTableView extends RollTableConfig {
 
     return context;
   }
+
+  activateListeners(html) {
+    // Nice table image view
+    html.on('click', '.result-image img', (event) => {
+      const img = event.currentTarget;
+      const li = img.closest('.table-result');
+      const result = this.document.results.get(li.dataset.resultId);
+      const ip = new ImagePopout(img.src, {
+        title: game.i18n.localize('DOCUMENT.TableResult'),
+        uuid: result.uuid,
+      });
+      ip.render(true);
+    });
+
+    super.activateListeners(html);
+  }
 }
 
 Hooks.once('init', () => {

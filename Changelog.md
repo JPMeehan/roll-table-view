@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 Image popouts
+
+- Clicking on an image now pops it out for fuller viewing
+
 ## 1.0.0 Full Release
 
 - Removed border from image in header

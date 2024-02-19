@@ -24,6 +24,8 @@
       flex: 0 0 40px;
       img {
         border: none;
+        padding: 0 3px 0 0;
+        cursor: pointer;
       }
     }
     td.result-range,
