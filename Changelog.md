@@ -4,6 +4,7 @@
 
 - Removed border from image in header
 - Ranges consisting of a single value will now display as just that value (00–00 => 00)
+- Clicking a result's range will toggle the result as drawn or not
 
 ## 0.9 Beta release
 

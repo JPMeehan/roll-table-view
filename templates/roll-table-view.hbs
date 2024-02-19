@@ -38,11 +38,13 @@
                     <input type="hidden" name="results.{{i}}._id" value="{{result._id}}"/>
                     <td class="result-range">
                         <input type="hidden" name="results.{{i}}.rangeL" value="{{result.range.[0]}}" placeholder="L" data-dtype="Number"/>
-                        {{#if (gt result.range.[1] result.range.[0])}}
-                            {{concat result.range.[0] "–" result.range.[1]}}
-                        {{else}}
-                            {{result.range.[0]}}
-                        {{/if}}
+                        <a class="lock-result">
+                            {{#if (gt result.range.[1] result.range.[0])}}
+                                {{concat result.range.[0] "–" result.range.[1]}}
+                            {{else}}
+                                {{result.range.[0]}}
+                            {{/if}}
+                        </a>
                         <input type="hidden" name="results.{{i}}.rangeH" value="{{result.range.[1]}}" placeholder="H" data-dtype="Number"/>
                     </td>
                     <td class="result-image">
