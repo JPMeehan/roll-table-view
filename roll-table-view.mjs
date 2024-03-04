@@ -29,6 +29,8 @@ class RollTableView extends RollTableConfig {
       const ip = new ImagePopout(img.src, {
         title: game.i18n.localize('DOCUMENT.TableResult'),
         uuid: result.uuid,
+        width: 400,
+        height: 'auto',
       });
       ip.render(true);
     });
