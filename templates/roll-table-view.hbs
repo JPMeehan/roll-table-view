@@ -38,7 +38,7 @@
                     <input type="hidden" name="results.{{i}}._id" value="{{result._id}}"/>
                     <td class="result-range">
                         <input type="hidden" name="results.{{i}}.rangeL" value="{{result.range.[0]}}" placeholder="L" data-dtype="Number"/>
-                        <a class="lock-result">
+                        <a class="lock-result" data-tooltip="{{localize "TABLE.ToggleDrawn"}}">
                             {{#if (gt result.range.[1] result.range.[0])}}
                                 {{concat result.range.[0] "–" result.range.[1]}}
                             {{else}}
@@ -48,7 +48,7 @@
                         <input type="hidden" name="results.{{i}}.rangeH" value="{{result.range.[1]}}" placeholder="H" data-dtype="Number"/>
                     </td>
                     <td class="result-image">
-                        <img src="{{result.img}}"/>
+                        <img data-tooltip="{{localize "WEBRTC.TooltipPopout"}}" src="{{result.img}}"/>
                     </td>
                     <td class="result-details">
                         <input type="hidden" name="results.{{i}}.type" data-dtype="Number" value="{{result.type}}">

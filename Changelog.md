@@ -3,6 +3,7 @@
 ## 1.0.1 Image popouts
 
 - Clicking on an image now pops it out for fuller viewing
+- Added tooltips to the range and image click actions
 
 ## 1.0.0 Full Release
 
