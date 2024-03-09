@@ -35,12 +35,45 @@ class RollTableView extends RollTableConfig {
       ip.render(true);
     });
 
+    ContextMenu.create(this, html, 'tbody .table-result', this.tableResultMenu);
+
     super.activateListeners(html);
+  }
+
+  get tableResultMenu() {
+    const getResult = ([target]) => {
+      return this.document.results.get(target.dataset.resultId);
+    };
+
+    return [
+      {
+        name: game.i18n.format('DOCUMENT.Update', {
+          type: game.i18n.localize('DOCUMENT.TableResult'),
+        }),
+        icon: "<i class='fas fa-edit'></i>",
+        condition: (target) =>
+          getResult(target).type === CONST.TABLE_RESULT_TYPES.TEXT,
+        callback: (target) => getResult(target).sheet.render(true),
+      },
+    ];
+  }
+}
+
+class TableResultEdit extends DocumentSheet {
+  static get defaultOptions() {
+    return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ['sheet', 'table-result-edit'],
+      template: 'modules/roll-table-view/templates/table-result-edit.hbs',
+      width: 400,
+    });
   }
 }
 
 Hooks.once('init', () => {
   DocumentSheetConfig.registerSheet(RollTable, MODULE_ID, RollTableView, {
     label: 'RollTableView.SheetLabel',
+  });
+  DocumentSheetConfig.registerSheet(TableResult, MODULE_ID, TableResultEdit, {
+    label: 'RollTableView.ResultSheetLabel',
   });
 });

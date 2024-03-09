@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 Rich text result editing
+
+- Added context menu to roll table results, with an open to edit text result in a rich text editor.
+
 ## 1.0.1 Image popouts
 
 - Clicking on an image now pops it out for fuller viewing

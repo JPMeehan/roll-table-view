@@ -34,3 +34,9 @@
     }
   }
 }
+
+.table-result-edit {
+  .editor {
+    min-height: 300px;
+  }
+}

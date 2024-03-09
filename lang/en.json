@@ -1,5 +1,6 @@
 {
   "RollTableView": {
-    "SheetLabel": "View Roll Table Sheet"
+    "SheetLabel": "View Roll Table Sheet",
+    "ResultSheetLabel": "Table Result Text Editor"
   }
 }
