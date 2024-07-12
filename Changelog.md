@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 v12 Verification
+
+- Updated verified version to v12
+- Adjusted CSS to possibly fix display in Electron client (#3)
+
 ## 1.0.2 Rich text result editing
 
 - Added context menu to roll table results, with an open to edit text result in a rich text editor.
