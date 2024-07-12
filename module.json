@@ -4,7 +4,7 @@
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "12"
   },
   "description": "Adds a view-only sheet for rollable tables to use after they've been configured.",
   "authors": [

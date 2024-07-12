@@ -1,12 +1,12 @@
 .roll-table-view {
-  .sheet-header {
+  & .sheet-header {
     img {
       border: none;
     }
   }
 
-  table.table-results {
-    .table-result {
+  & table.table-results {
+    & .table-result {
       align-items: center;
       &.roulette {
         background: rgba(0, 0, 0, 0.25);
@@ -17,10 +17,10 @@
         background: rgba(0, 0, 0, 0.15);
       }
     }
-    .result-range {
+    & .result-range {
       flex: 0 0 60px;
     }
-    .result-image {
+    & .result-image {
       flex: 0 0 40px;
       img {
         border: none;
@@ -28,15 +28,15 @@
         cursor: pointer;
       }
     }
-    td.result-range,
-    td.result-image {
+    & td.result-range,
+    & td.result-image {
       text-align: center;
     }
   }
 }
 
 .table-result-edit {
-  .editor {
+  & .editor {
     min-height: 300px;
   }
 }
